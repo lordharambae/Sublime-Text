@@ -1,0 +1,52 @@
+{
+	"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -o '${file_path}/${file_base_name}'  && '${file_path}/${file_base_name}'"],
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"working_dir": "${file_path}",
+	"selector": "source.c",
+	"variants": [
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -O1 -o '${file_path}/${file_base_name}' && '${file_path}/${file_base_name}'"],
+			"name": "-O1"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -O2 -o '${file_path}/${file_base_name}' && '${file_path}/${file_base_name}'"],
+			"name": "-O2"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -O3 -o '${file_path}/${file_base_name}' && '${file_path}/${file_base_name}'"],
+			"name": "-O3"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -Ofast -o '${file_path}/${file_base_name}' && '${file_path}/${file_base_name}'"],
+			"name": "-Ofast"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -E -o '${file_path}/${file_base_name}.E.c'"],
+			"name": "-E"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall --analyze"],
+			"name": "--analyze"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -S -o '${file_path}/${file_base_name}.S'"],
+			"name": "-S"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -S -O1 -o '${file_path}/${file_base_name}.S'"],
+			"name": "-S -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -S -O2 -o '${file_path}/${file_base_name}.S'"],
+			"name": "-S -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -S -O3 -o '${file_path}/${file_base_name}.S'"],
+			"name": "-S -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "clang '${file}' -std=c11 -Wall -S -Ofast -o '${file_path}/${file_base_name}.S'"],
+			"name": "-S -Ofast"
+		},
+	]
+}
