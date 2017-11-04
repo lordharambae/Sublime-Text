@@ -1,0 +1,330 @@
+{
+	"cmd": ["bash", "-c", ""],
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"working_dir": "${file_path}",
+	"selector": "source.c++",
+	"variants": [
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++14"
+		},
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -O1 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++14 -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -O2 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++14 -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -O3 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++14 -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -Ofast -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++14 -Ofast"
+		},
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -E -o '${file_path}/${file_base_name}.E.cpp'"],
+			"name": "clang++ -std=c++14 -E"
+		},
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall --analyze"],
+			"name": "clang++ -std=c++14 --analyze"
+		},
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -S -masm=intel -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++14 -S"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -S -masm=intel -O1 -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++14 -S -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -S -masm=intel -O2 -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++14 -S -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -S -masm=intel -O3 -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++14 -S -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++14 -Wall -S -masm=intel -Ofast -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++14 -S -Ofast"
+		},
+
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++1z"
+		},
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -O1 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++1z -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -O2 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++1z -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -O3 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++1z -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -Ofast -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "clang++ -std=c++1z -Ofast"
+		},
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -E -o '${file_path}/${file_base_name}.E.cpp'"],
+			"name": "clang++ -std=c++1z -E"
+		},
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall --analyze"],
+			"name": "clang++ -std=c++1z --analyze"
+		},
+
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -S -masm=intel -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++1z -S"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -S -masm=intel -O1 -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++1z -S -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -S -masm=intel -O2 -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++1z -S -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -S -masm=intel -O3 -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++1z -S -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "clang++ '${file}' -std=c++1z -Wall -S -masm=intel -Ofast -o '${file_path}/${file_base_name}.S'"],
+			"name": "clang++ -std=c++1z -S -Ofast"
+		},
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++14"
+		},
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -O1 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++14 -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -O2 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++14 -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -O3 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++14 -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -Ofast -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++14 -Ofast"
+		},
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -E -o '${file_path}/${file_base_name}.E.cpp'"],
+			"name": "llvm-g++ -std=c++14 -E"
+		},
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall --analyze"],
+			"name": "llvm-g++ -std=c++14 --analyze"
+		},
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -S -masm=intel -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++14 -S"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -S -masm=intel -O1 -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++14 -S -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -S -masm=intel -O2 -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++14 -S -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -S -masm=intel -O3 -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++14 -S -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++14 -Wall -S -masm=intel -Ofast -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++14 -S -Ofast"
+		},
+
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++1z"
+		},
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -O1 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++1z -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -O2 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++1z -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -O3 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++1z -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -Ofast -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "llvm-g++ -std=c++1z -Ofast"
+		},
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -E -o '${file_path}/${file_base_name}.E.cpp'"],
+			"name": "llvm-g++ -std=c++1z -E"
+		},
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall --analyze"],
+			"name": "llvm-g++ -std=c++1z --analyze"
+		},
+
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -S -masm=intel -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++1z -S"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -S -masm=intel -O1 -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++1z -S -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -S -masm=intel -O2 -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++1z -S -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -S -masm=intel -O3 -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++1z -S -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "llvm-g++ '${file}' -std=c++1z -Wall -S -masm=intel -Ofast -o '${file_path}/${file_base_name}.S'"],
+			"name": "llvm-g++ -std=c++1z -S -Ofast"
+		},
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++14"
+		},
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -O1 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++14 -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -O2 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++14 -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -O3 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++14 -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -Ofast -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++14 -Ofast"
+		},
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -E -o '${file_path}/${file_base_name}.E.cpp'"],
+			"name": "g++ -std=c++14 -E"
+		},
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall --analyze"],
+			"name": "g++ -std=c++14 --analyze"
+		},
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -S -masm=intel -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++14 -S"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -S -masm=intel -O1 -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++14 -S -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -S -masm=intel -O2 -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++14 -S -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -S -masm=intel -O3 -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++14 -S -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++14 -Wall -S -masm=intel -Ofast -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++14 -S -Ofast"
+		},
+
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++1z"
+		},
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -O1 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++1z -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -O2 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++1z -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -O3 -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++1z -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -Ofast -o '${file_path}/${file_base_name}.out' && '${file_path}/${file_base_name}.out'"],
+			"name": "g++ -std=c++1z -Ofast"
+		},
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -E -o '${file_path}/${file_base_name}.E.cpp'"],
+			"name": "g++ -std=c++1z -E"
+		},
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall --analyze"],
+			"name": "g++ -std=c++1z --analyze"
+		},
+
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -S -masm=intel -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++1z -S"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -S -masm=intel -O1 -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++1z -S -O1"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -S -masm=intel -O2 -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++1z -S -O2"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -S -masm=intel -O3 -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++1z -S -O3"
+		},
+		{
+			"cmd": ["bash", "-c", "g++ '${file}' -std=c++1z -Wall -S -masm=intel -Ofast -o '${file_path}/${file_base_name}.S'"],
+			"name": "g++ -std=c++1z -S -Ofast"
+		},
+
+	]
+}
